@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm test",
-    "lint": "jscs . --config .jscsrc && eslint --config .eslintesrc --ext .js .",
+    "lint": "jscs . --config .jscsrc && eslint --config .eslintrc --ext .js .",
     "start": "webpack-dev-server"
   },
   "author": "",

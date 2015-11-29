@@ -3,7 +3,7 @@
     "fileExtensions": [".js", ".jsx", ".es6"],
     "excludeFiles": [
         "node_modules/**",
-        "dist/**",
+        "build/**",
         "devserver/public/**"
     ],
     "disallowAnonymousFunctions": null,

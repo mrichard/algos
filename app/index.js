@@ -8,5 +8,4 @@ function main () {
     ReactDOM.render(<App />, app);
 }
 
-
 main();

@@ -7,8 +7,8 @@ let HtmlwebpackPlugin = require('html-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
-	app: './app',
-	build: path.join(__dirname, 'build')
+    app: './app',
+    build: path.join(__dirname, 'build')
 };
 
 process.env.BABEL_ENV = TARGET;
@@ -46,6 +46,7 @@ let common = {
 
 // merge based on lifecycle
 if (TARGET === 'start' || !TARGET) {
+
     module.exports = merge(common, {
         devtool: 'eval-source-map',
         devServer: {
