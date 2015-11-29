@@ -11,6 +11,7 @@ const PATHS = {
 	build: path.join(__dirname, 'build')
 };
 
+process.env.BABEL_ENV = TARGET;
 
 let common = {
     entry: PATHS.app,
@@ -19,7 +20,7 @@ let common = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['', '.js', 'jsx']
+        extensions: ['', '.js']
     },
     module: {
         loaders: [
@@ -37,9 +38,10 @@ let common = {
     },
     plugins: [
         new HtmlwebpackPlugin({
-            title: 'Kanban app'
+            title: 'Boilerplate React and Webpack'
         })
-    ]
+    ],
+    libraryTarget: 'umd'
 };
 
 // merge based on lifecycle
