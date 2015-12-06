@@ -1,20 +1,20 @@
 'use strict';
 
-let path = require('path');
-let webpack = require('webpack');
-let merge = require('webpack-merge');
-let HtmlwebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const HtmlwebpackPlugin = require('html-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
-    app: './app',
+    src: './src',
     build: path.join(__dirname, 'build')
 };
 
 process.env.BABEL_ENV = TARGET;
 
-let common = {
-    entry: PATHS.app,
+const common = {
+    entry: PATHS.src,
     output: {
         path: PATHS.build,
         filename: 'bundle.js'
@@ -27,7 +27,7 @@ let common = {
             {
                 test: /\.css$/,
                 loaders: ['style', 'css'],
-                include: PATHS.app
+                include: PATHS.src
             },
             {
                 test: /\.js$/,

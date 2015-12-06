@@ -1,6 +1,6 @@
 {
     "esnext": true,
-    "fileExtensions": [".js", ".jsx", ".es6"],
+    "fileExtensions": [".js"],
     "excludeFiles": [
         "node_modules/**",
         "build/**",
