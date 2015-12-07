@@ -1,5 +1,5 @@
 import React from 'react';
-import Note from './components/Note/Note';
+import Note from './Note/Note';
 
 const App = (props) => <Note {...props}/>;
 

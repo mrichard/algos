@@ -1,0 +1,23 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc", "closure"]
+    },
+    "source": {
+        "include": ["index.js", "utils", "README.md"],
+        "includePattern": ".(js|jsx|es6)$",
+        "excludePattern": "node_modules"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true
+    },
+    "opts": {
+        "encoding": "utf8",
+        "private": true,
+        "recurse": true
+    }
+}

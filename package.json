@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/istanbul test --dir docs/coverage --print both ./node_modules/babel-tape-runner/bin/babel-tape-runner __tests/*_test.es6 | ./node_modules/faucet/bin/cmd.js",
+    "docs": "exit 0",
+    "test": "./node_modules/.bin/istanbul test --dir docs/coverage --print both ./node_modules/babel-tape-runner/bin/babel-tape-runner src/**/__tests/**/*.js | ./node_modules/faucet/bin/cmd.js",
     "lint": "jscs . --config .jscsrc && eslint --config .eslintrc .",
     "start": "webpack-dev-server"
   },
   "pre-commit": [
-    "lint"
+    "lint",
+    "test"
   ],
   "author": "",
   "license": "ISC",
