@@ -1,5 +1,3 @@
-var webpack = require('webpack');
-
 module.exports = function (config) {
     config.set({
         browsers: ['Chrome'],
@@ -28,4 +26,4 @@ module.exports = function (config) {
             noInfo: true
         }
     });
-}
+};
