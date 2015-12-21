@@ -1,7 +1,11 @@
-import test from 'tape';
-// import Note from '../Note';
+import React from 'react';
+import {
+    renderIntoDocument
+} from 'react-addons-test-utils';
+import Note from '../Note';
 
-test('Note', (assert) => {
-    assert.ok(true, 'This is a test');
-    assert.end();
-});
+describe('Note', () => {
+    it('should be OK', () => {
+        expect(true).to.be.ok;
+    });
+})
