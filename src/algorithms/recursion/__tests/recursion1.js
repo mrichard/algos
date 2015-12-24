@@ -10,22 +10,22 @@ describe('factorial - ', () => {
     });
 
     it('Should return 1 with no input', () => {
-        let x = factorial();
-        expect(x).to.equal(1);
+        const result = factorial();
+        expect(result).to.equal(1);
     });
 
     it('Should return 1 when input is 0', () => {
-        let x = factorial(0);
-        expect(x).to.equal(1);
+        const result = factorial(0);
+        expect(result).to.equal(1);
     });
 
     it('Should return 1 when input is 1', () => {
-        let x = factorial(1);
-        expect(x).to.equal(1);
+        const result = factorial(1);
+        expect(result).to.equal(1);
     });
 
     it('Should return factorial when input is valid', () => {
-        let x = factorial(5);
-        expect(x).to.equal(120);
+        const result = factorial(5);
+        expect(result).to.equal(120);
     });
 });
