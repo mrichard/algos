@@ -1,9 +1,7 @@
 'use strict';
 
 const path = require('path');
-const webpack = require('webpack');
 const merge = require('webpack-merge');
-const HtmlwebpackPlugin = require('html-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
@@ -25,22 +23,12 @@ const common = {
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                loaders: ['style', 'css'],
-                include: PATHS.src
-            },
-            {
                 test: /\.js$/,
                 loaders: ['babel-loader'],
                 exclude: /node_modules/
             }
         ]
     },
-    plugins: [
-        new HtmlwebpackPlugin({
-            title: 'Boilerplate React and Webpack'
-        })
-    ],
     libraryTarget: 'umd'
 };
 
@@ -57,9 +45,6 @@ if (TARGET === 'start' || !TARGET) {
             stats: 'errors-only',
             host: process.env.HOST,
             port: process.env.PORT
-        },
-        plugins: [
-            new webpack.HotModuleReplacementPlugin()
-        ]
+        }
     });
 }

@@ -1,9 +1,15 @@
-# React and Webpack boilerplate
+# Algorithms in ES6
+
+A set of algorithms implemented in ES6
+
+### Getting Started
+
+- npm install
+- npm test
 
 
 ### TODO
 
-1. Add phantom JS launcher to karma
-2. Add code coverage
-3. Add JsDoc
-4. Add React unit tests ***In progress***
+- Add Istanbul code coverage to Karma test runner
+- Add JS Doc build step
+- Add a watch for linting and unit testing

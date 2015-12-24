@@ -1,6 +1,5 @@
 {
     "ecmaFeatures": {
-        "jsx": true,
         "arrowFunctions": true,
         "binaryLiterals": false,
         "blockBindings": true,
@@ -33,12 +32,8 @@
     "globals": {
         "expect": true,
         "fixture": true,
-        "sinon": true,
-        "TweenLite": true
+        "sinon": true
     },
-    "plugins": [
-        "react"
-    ],
     "rules": {
         "accessor-pairs": 0,
         "array-bracket-spacing": [2, "never"],
@@ -220,23 +215,6 @@
         "vars-on-top": 0,
         "wrap-iife": 0,
         "wrap-regex": 0,
-        "yoda": [0, "never"],
-        "react/display-name": 2,
-        "react/jsx-boolean-value": 2,
-        "react/jsx-no-undef": 2,
-        "jsx-quotes": [2, "prefer-double"],
-        "react/jsx-sort-prop-types": 2,
-        "react/jsx-sort-props": 0,
-        "react/jsx-uses-react": 2,
-        "react/jsx-uses-vars": 2,
-        "react/no-did-mount-set-state": 2,
-        "react/no-did-update-set-state": 2,
-        "react/no-multi-comp": 2,
-        "react/no-unknown-property": 2,
-        "react/prop-types": 2,
-        "react/react-in-jsx-scope": 2,
-        "react/self-closing-comp": 2,
-        "react/sort-comp": [2, { "order": ["constructor", "lifecycle", "everything-else", "render"] }],
-        "react/wrap-multilines": 2
+        "yoda": [0, "never"]
     }
 }

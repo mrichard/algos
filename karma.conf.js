@@ -23,7 +23,6 @@ module.exports = function (config) {
             }
         },
         webpackServer: {
-            noInfo: true
         }
     });
 };
