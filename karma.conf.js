@@ -1,9 +1,10 @@
 module.exports = function (config) {
     config.set({
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         singleRun: true,
         frameworks: ['mocha', 'chai-sinon'],
         files: [
+            'node_modules/babel-core/browser-polyfill.js',
             'tests.webpack.js'
         ],
         preprocessors: {
@@ -11,13 +12,18 @@ module.exports = function (config) {
         },
         reporters: ['dots', 'coverage'],
         coverageReporter: {
+            dir: 'meta/coverage',
             reporters: [
                 {
                     type: 'text-summary'
                 },
                 {
                     type: 'html',
-                    dir: 'meta/coverage'
+                    subdir: 'html'
+                },
+                {
+                    type: 'lcov',
+                    subdir: 'lcov'
                 }
             ]
         },
@@ -32,15 +38,12 @@ module.exports = function (config) {
         ],
         webpack: {
             devtool: 'inline-source-map',
-            node: {
-                fs: 'empty'
-            },
             module: {
-                postLoaders: [
+                preLoaders: [
                     {
                         test: /\.js$/,
                         exclude: /(node_modules|__tests|tests.webpack.js|karma.conf.js|webpack.config.js)/,
-                        loader: 'isparta'
+                        loader: 'isparta-instrumenter-loader'
                     }
                 ],
                 loaders: [
