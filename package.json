@@ -6,7 +6,7 @@
   "scripts": {
     "coverage": "istanbul cover -x src/**/__tests/**/*.js --dir docs/coverage --include-all-sources --print both",
     "docs": "exit 0",
-    "test": "karma start --log-level debug",
+    "test": "karma start",
     "lint": "jscs . --config .jscsrc && eslint --config .eslintrc .",
     "start": "webpack-dev-server"
   },

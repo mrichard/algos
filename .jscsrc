@@ -3,7 +3,8 @@
     "fileExtensions": [".js"],
     "excludeFiles": [
         "node_modules/**",
-        "build/**"
+        "build/**",
+        "meta/**"
     ],
     "disallowAnonymousFunctions": null,
     "disallowArrowFunctions": null,
