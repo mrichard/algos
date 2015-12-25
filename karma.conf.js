@@ -9,15 +9,45 @@ module.exports = function (config) {
         preprocessors: {
             'tests.webpack.js': ['webpack', 'sourcemap']
         },
-        reporters: ['dots'],
+        reporters: ['dots', 'coverage'],
+        coverageReporter: {
+            reporters: [
+                {
+                    type: 'text-summary'
+                },
+                {
+                    type: 'html',
+                    dir: 'meta/coverage'
+                }
+            ]
+        },
+        plugins: [
+            require('karma-chrome-launcher'),
+            require('karma-coverage'),
+            require('karma-mocha'),
+            require('karma-sourcemap-loader'),
+            require('karma-phantomjs-launcher'),
+            require('karma-chai-sinon'),
+            require('karma-webpack')
+        ],
         webpack: {
             devtool: 'inline-source-map',
+            node: {
+                fs: 'empty'
+            },
             module: {
+                postLoaders: [
+                    {
+                        test: /\.js$/,
+                        exclude: /(node_modules|__tests|tests.webpack.js|karma.conf.js|webpack.config.js)/,
+                        loader: 'isparta'
+                    }
+                ],
                 loaders: [
                     {
                         test: /\.js$/,
-                        loader: 'babel-loader',
-                        exclude: /node_modules/
+                        exclude: /node_modules/,
+                        loader: 'babel?stage=0'
                     }
                 ]
             }

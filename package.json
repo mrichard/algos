@@ -6,7 +6,7 @@
   "scripts": {
     "coverage": "istanbul cover -x src/**/__tests/**/*.js --dir docs/coverage --include-all-sources --print both",
     "docs": "exit 0",
-    "test": "karma start",
+    "test": "karma start --log-level debug",
     "lint": "jscs . --config .jscsrc && eslint --config .eslintrc .",
     "start": "webpack-dev-server"
   },
@@ -23,12 +23,14 @@
     "chai": "^3.4.1",
     "css-loader": "^0.23.0",
     "eslint": "^1.10.2",
+    "isparta-loader": "^2.0.0",
     "istanbul": "^0.4.1",
     "jscs": "^2.6.0",
     "karma": "^0.13.15",
     "karma-chai-sinon": "^0.1.5",
     "karma-chrome-launcher": "^0.2.2",
     "karma-cli": "^0.1.1",
+    "karma-coverage": "^0.5.3",
     "karma-mocha": "^0.2.1",
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-sourcemap-loader": "^0.3.6",
