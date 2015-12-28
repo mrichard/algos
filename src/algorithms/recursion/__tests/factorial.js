@@ -1,4 +1,4 @@
-import { factorial } from '../recursion1';
+import { factorial } from '../factorial';
 
 describe('factorial - ', () => {
     it('Should throw an error when input is not a number', () => {

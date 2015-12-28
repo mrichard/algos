@@ -10,7 +10,7 @@ module.exports = function (config) {
         preprocessors: {
             'tests.webpack.js': ['webpack', 'sourcemap']
         },
-        reporters: ['dots', 'coverage'],
+        reporters: ['dots', 'notify', 'coverage'],
         coverageReporter: {
             dir: 'meta/coverage',
             reporters: [
@@ -27,11 +27,15 @@ module.exports = function (config) {
                 }
             ]
         },
+        notifyReporter: {
+            reportEachFailure: true
+        },
         plugins: [
             require('karma-chrome-launcher'),
             require('karma-coverage'),
             require('karma-mocha'),
             require('karma-sourcemap-loader'),
+            require('karma-notify-reporter'),
             require('karma-phantomjs-launcher'),
             require('karma-chai-sinon'),
             require('karma-webpack')
@@ -55,7 +59,8 @@ module.exports = function (config) {
                 ]
             }
         },
-        webpackServer: {
+        webpackMiddleware: {
+            noInfo: true
         }
     });
 };

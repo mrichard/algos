@@ -1,5 +1,5 @@
 {
-  "name": "kanban",
+  "name": "algos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,8 @@
     "docs": "exit 0",
     "test": "karma start",
     "lint": "jscs . --config .jscsrc && eslint --config .eslintrc .",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --progress --colors",
+    "watch": "karma start --no-single-run"
   },
   "pre-commit": [
     "lint",
@@ -33,6 +34,7 @@
     "karma-cli": "^0.1.1",
     "karma-coverage": "^0.5.3",
     "karma-mocha": "^0.2.1",
+    "karma-notify-reporter": "^0.1.1",
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
