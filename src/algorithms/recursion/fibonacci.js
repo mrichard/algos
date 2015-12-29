@@ -1,3 +1,9 @@
+
+/**
+ * Returns the nth fibonacci number
+ * @param  {number} n number
+ * @return {number}   nth fibonacci number
+ */
 export const fibonacci = (n) => {
 
     // If n is not a number then throw an error
