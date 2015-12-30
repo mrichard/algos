@@ -15,6 +15,7 @@ module.exports = {
     entry: PATHS.src,
     output: {
         path: PATHS.build,
+        publicPath: '/assets/',
         filename: 'bundle.js'
     },
     resolve: {
