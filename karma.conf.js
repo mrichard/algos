@@ -48,6 +48,11 @@ module.exports = function (config) {
                         test: /\.js$/,
                         exclude: /(node_modules|__tests|tests.webpack.js|karma.conf.js|webpack.config.js)/,
                         loader: 'isparta-instrumenter-loader'
+                    },
+                    {
+                        test: /\.js$/,
+                        exclude: /(node_modules|build)/,
+                        loaders: ['eslint', 'jscs']
                     }
                 ],
                 loaders: [
