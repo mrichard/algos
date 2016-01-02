@@ -10,6 +10,4 @@ A set of algorithms implemented in ES6
 
 ### TODO
 
-- Add Istanbul code coverage to Karma test runner
 - Add JS Doc build step
-- Add a watch for linting and unit testing
